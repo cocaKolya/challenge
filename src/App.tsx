@@ -1,12 +1,26 @@
-import React from "react";
-import Stopwatch from "src/tasks/1/Stopwatch";
-
+import styled from "styled-components";
+import {StopWatchF} from "./tasks/1/Stopwatch/StopwatchF";
+import CommentsList from "./tasks/2/CommentsList";
 function App() {
     return (
-        <div className="App">
-            <Stopwatch />
-        </div>
+        <Wrapper>
+            <BlockWrapper>
+                <StopWatchF />
+            </BlockWrapper>
+            <BlockWrapper>
+                <CommentsList />
+            </BlockWrapper>
+        </Wrapper>
     );
 }
 
 export default App;
+
+export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+const BlockWrapper = styled.div`
+    margin: 50px;
+`;

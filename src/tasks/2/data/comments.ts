@@ -1,4 +1,14 @@
-const comments: any[] = [
+/* eslint-disable no-useless-concat */
+export interface Comment {
+    id: number;
+    created: string;
+    text: string;
+    author: number;
+    parent: number | null;
+    likes: number;
+}
+
+const comments: Comment[] = [
     {
         id: 204,
         created: "2021-07-04T14:44:40.038111+00:00",
